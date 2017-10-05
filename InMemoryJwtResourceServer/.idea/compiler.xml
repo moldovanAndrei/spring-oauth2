@@ -22,24 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="in-memory-authorization-service" />
-        <module name="in-memory-jwt-authorization-service" />
         <module name="in-memory-jwt-resource-server" />
-        <module name="in-memory-resource-server" />
-        <module name="InMemoryJwtResourceServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="in-memory-authorization-service" target="1.5" />
       <module name="in-memory-jwt-authorization-service" target="1.5" />
       <module name="in-memory-jwt-resource-server" target="1.5" />
-      <module name="in-memory-resource-server" target="1.5" />
-      <module name="InMemoryAuthorizationService" target="1.5" />
-      <module name="InMemoryJwtAuthorizationService" target="1.5" />
-      <module name="InMemoryJwtResourceServer" target="1.5" />
-      <module name="InMemoryResourceServer" target="1.5" />
-      <module name="spring-oauth2-security" target="1.5" />
-      <module name="SpringOAuth2Security" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

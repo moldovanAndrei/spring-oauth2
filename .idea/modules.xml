@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InMemoryAuthorizationService/in-memory-authorization-service.iml" filepath="$PROJECT_DIR$/InMemoryAuthorizationService/in-memory-authorization-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/InMemoryJwtAuthorizationService/in-memory-jwt-authorization-service.iml" filepath="$PROJECT_DIR$/InMemoryJwtAuthorizationService/in-memory-jwt-authorization-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InMemoryJwtAuthorizationService2/in-memory-jwt-authorization-service.iml" filepath="$PROJECT_DIR$/InMemoryJwtAuthorizationService2/in-memory-jwt-authorization-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/InMemoryJwtResourceServer/in-memory-jwt-resource-server.iml" filepath="$PROJECT_DIR$/InMemoryJwtResourceServer/in-memory-jwt-resource-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/InMemoryResourceServer/in-memory-resource-server.iml" filepath="$PROJECT_DIR$/InMemoryResourceServer/in-memory-resource-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-oauth2-security.iml" filepath="$PROJECT_DIR$/spring-oauth2-security.iml" />
