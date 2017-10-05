@@ -12,6 +12,8 @@
     <modules>
         <module>InMemoryAuthorizationService</module>
         <module>InMemoryResourceServer</module>
+		<module>InMemoryJwtAuthorizationService</module>
+		<module>InMemoryJwtResourceServer</module>
     </modules>
 
     <properties>
