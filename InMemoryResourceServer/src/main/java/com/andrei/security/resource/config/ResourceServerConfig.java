@@ -9,10 +9,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
 
 /**
- * ${TODO} Klassenbeschreibung
+ * Resource server configuration.
  *
- * @author DVM5CLT
- * @version $Id: ResourceServerConfig.java 31604 2014-10-30 08:03:19Z DVM5CLT $$
+ * @author Andrei Moldovan
  * @since 04.10.2017
  */
 @EnableGlobalMethodSecurity(prePostEnabled = true)
