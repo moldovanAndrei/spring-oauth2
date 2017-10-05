@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Spring Boot application class to start the resource server.
  *
- * @author DVM5CLT
- * @version $Id: ResourceServerOAuth2Application.java 31604 2014-10-30 08:03:19Z DVM5CLT $$
+ * @author Andrei Moldovan.
  * @since 04.10.2017
  */
 @SpringBootApplication
