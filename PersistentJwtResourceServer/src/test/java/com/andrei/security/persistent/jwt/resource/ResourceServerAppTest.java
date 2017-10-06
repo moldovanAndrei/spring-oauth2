@@ -1,4 +1,4 @@
-package com.andrei.security.jwt.resource;
+package com.andrei.security.persistent.jwt.resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

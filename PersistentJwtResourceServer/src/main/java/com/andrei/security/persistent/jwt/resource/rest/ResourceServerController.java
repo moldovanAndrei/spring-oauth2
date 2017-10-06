@@ -1,4 +1,4 @@
-package com.andrei.security.jwt.resource.rest;
+package com.andrei.security.persistent.jwt.resource.rest;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;

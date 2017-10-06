@@ -1,4 +1,4 @@
-package com.andrei.security.jwt.resource.config;
+package com.andrei.security.persistent.jwt.resource.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
