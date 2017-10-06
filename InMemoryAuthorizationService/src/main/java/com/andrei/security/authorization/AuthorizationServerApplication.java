@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Spring Boot App for authorization server.
  *
- * @author Andrei Moldovan.
+ * @author Andrei Moldovan
  * @since 04.10.2017
  */
 @SpringBootApplication

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Spring Boot application class to start the resource server.
  *
- * @author Andrei Moldovan.
+ * @author Andrei Moldovan
  * @since 05.10.2017
  */
 @SpringBootApplication
