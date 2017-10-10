@@ -1,5 +1,8 @@
 package com.andrei.security.jwt.resource.rest;
 
+import java.util.Collections;
+import java.util.Map;
+
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,14 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
-import java.util.Map;
-
 /**
- * Rest API on resource server side which is secured with OAuth2 in memory token.
+ * Rest API on resource server side which is secured with OAuth2 in memory
+ * token.
  *
- * @author DVM5CLT
- * @version $Id: ResourceServerController.java 31604 2014-10-30 08:03:19Z DVM5CLT $$
+ * @author Andrei Moldovan
  * @since 04.10.2017
  */
 @RestController
