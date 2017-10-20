@@ -13,6 +13,7 @@
         <module>InMemoryJwtResourceServer</module>
         <module>PersistentJwtAuthorizationService</module>
         <module>PersistentJwtResourceServer</module>
+        <module>basic-spring-security-login</module>
     </modules>
     <properties>
         <!-- Spring versions -->
