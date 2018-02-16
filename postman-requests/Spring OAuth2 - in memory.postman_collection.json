@@ -1,0 +1,241 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring OAuth2 - in memory",
+		"_postman_id": "83b779e7-faf3-f1d4-a1a1-a3ae780f9f9d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/oauth/token?grant_type=client_credentials",
+			"request": {
+				"url": {
+					"raw": "localhost:8081/oauth/token?grant_type=client_credentials",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bXNnOnNlY3JldA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Read only client credentials token"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/oauth/token?grant_type=password&username=andrei&password=secret",
+			"request": {
+				"url": {
+					"raw": "localhost:8081/oauth/token?grant_type=password&username=andrei&password=secret",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "andrei",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bXNnOnNlY3JldA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Read/Write token request"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/oauth/token?grant_type=refresh_token&refresh_token=013a91d5-6302-4270-920c-7096c5bbfe93",
+			"request": {
+				"url": {
+					"raw": "localhost:8081/oauth/token?grant_type=refresh_token&refresh_token=013a91d5-6302-4270-920c-7096c5bbfe93",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "refresh_token",
+							"value": "013a91d5-6302-4270-920c-7096c5bbfe93",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bXNnOnNlY3JldA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Refresh token"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9081",
+			"request": {
+				"url": "localhost:9081",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Unsecure GET api call"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9081/secure",
+			"request": {
+				"url": "localhost:9081/secure",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3df2fdaf-9a63-4d67-a51e-b7a89164bdbb",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Secure GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9081/secure",
+			"request": {
+				"url": "localhost:9081/secure",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ab838140-63c9-46cb-8d6c-e4988e47a26f",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\" : \"new message\"\n}"
+				},
+				"description": "Secure POST request"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring OAuth2 - persistent jwt",
+		"_postman_id": "9dac16b2-fdf8-2b43-92e2-b111c25f2f38",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8083/oauth/token?grant_type=password&username=andrei&password=secret",
+			"request": {
+				"url": {
+					"raw": "localhost:8083/oauth/token?grant_type=password&username=andrei&password=secret",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "andrei",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2xpZW50OmNsaWVudFNlY3JldA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Token request"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9083",
+			"request": {
+				"url": "localhost:9083/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTg1MzUwOTUsInVzZXJfbmFtZSI6ImJvYiIsImp0aSI6IjRhYzIyZjk2LWI5OWUtNGU1MC05MjkwLWNiMDI4OThlMGU4YiIsImNsaWVudF9pZCI6ImNsaWVudCIsInNjb3BlIjpbInJlc291cmNlLXNlcnZlci1yZWFkIiwicmVzb3VyY2Utc2VydmVyLXdyaXRlIl19.hP6tNhZfsKFgbPRkcX5TUko_Twc8unBhxHpXLXJRw7yEbTcEDMB-i8Dtvu8UKQCMo8jLWdnZfGmJcz1qkPKVcJtc4SQD9Pa7oZbwmt-idyGDDIc_V8SDp32Eq36rTXyy-K1V7GhprYU-k9-BkdKuMkdh_Va4nCPH-G4L-lGdDeeYfwud_zSA9G6SUJTSgu7HHvBwUxC-e54HEbNAUmtrFKuNn2myenQfSXZu2O8QD5BPtrfmjlVBzKnRHKb9cMARLeb87SI8bCkTOKzgiV6cvCkhxM274SHXoG_Hjq6PUxfUxKngU3gMxEec9Bs5mXzs97pnJIoMeq-dNMqHMFSRxQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Resource access"
+			},
+			"response": []
+		}
+	]
+}
