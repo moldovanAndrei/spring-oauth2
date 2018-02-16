@@ -15,7 +15,8 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 
 /**
- *  Configuration for the OAuth2 authorization server using In Memory Token Store.
+ * Configuration for the OAuth2 authorization server using In Memory Token
+ * Store.
  *
  * @author Andrei Moldovan
  * @since 04.10.2017
@@ -42,7 +43,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 				.refreshTokenValiditySeconds(10 * 60)
 
 				.and().withClient("msgReadOnly").secret("readSecret").authorizedGrantTypes("client_credentials")
-				.scopes("resource-server-read").accessTokenValiditySeconds(5 * 60);
+				.scopes("resource-server-read").accessTokenValiditySeconds(3 * 60);
 	}
 
 	@Override

@@ -18,15 +18,21 @@ public class ResourceServerController {
 
 	private String message = "Hello world!";
 
-	@PreAuthorize("#oauth2.hasScope('resource-server-read')")
 	@GetMapping
+	public String sayHello() {
+		return "Unecure hello!";
+	}
+
+	@PreAuthorize("#oauth2.hasScope('resource-server-read')")
+	@GetMapping("/secure")
 	public String getMessage() {
 		return this.message;
 	}
 
 	@PreAuthorize("#oauth2.hasScope('resource-server-write')")
-	@PostMapping
+	@PostMapping("/secure")
 	public void updateMessage(@RequestBody String message) {
 		this.message = message;
 	}
+
 }

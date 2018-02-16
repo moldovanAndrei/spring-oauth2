@@ -1,6 +1,9 @@
 package com.andrei.security.jwt.authorization.config;
 
+import java.security.KeyPair;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -13,13 +16,13 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 
 /**
- *  Configuration for the OAuth2 authorization server using In Memory Token Store.
+ * Configuration for the OAuth2 authorization server using In Memory Token
+ * Store.
  *
  * @author Andrei Moldovan
  * @since 04.10.2017
@@ -66,12 +69,11 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 	}
 
 	@Bean
+	@Qualifier("jwtAccessTokenConverter")
 	protected JwtAccessTokenConverter jwtTokenEnhancer() {
-		String pwd = "keySecret!";
-		KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("key.jks"),
-				pwd.toCharArray());
+		KeyPair keyPair = generateKeyPair();
 		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-		converter.setKeyPair(keyStoreKeyFactory.getKeyPair("key"));
+		converter.setKeyPair(keyPair);
 		return converter;
 	}
 
@@ -82,5 +84,12 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 		defaultTokenServices.setTokenStore(tokenStore());
 		defaultTokenServices.setSupportRefreshToken(true);
 		return defaultTokenServices;
+	}
+
+	private KeyPair generateKeyPair() {
+		String pwd = "keySecret!";
+		KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("key.jks"),
+				pwd.toCharArray());
+		return keyStoreKeyFactory.getKeyPair("key");
 	}
 }

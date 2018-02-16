@@ -20,15 +20,14 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/**").authenticated();
+		http.csrf().disable().authorizeRequests().antMatchers("/secure/**").authenticated();
 	}
 
 	@Primary
 	@Bean
 	public RemoteTokenServices tokenService() {
 		RemoteTokenServices tokenService = new RemoteTokenServices();
-		tokenService.setCheckTokenEndpointUrl(
-				"http://localhost:8081/oauth/check_token");
+		tokenService.setCheckTokenEndpointUrl("http://localhost:8081/oauth/check_token");
 		tokenService.setClientId("msg");
 		tokenService.setClientSecret("secret");
 		return tokenService;
